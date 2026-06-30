@@ -1,10 +1,5 @@
-const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-const header = document.querySelector('.site-header');
-let lastY = window.scrollY;
-window.addEventListener('scroll',()=>{
-  const y = window.scrollY;
-  header.style.transform = y > lastY && y > 120 ? 'translateY(-90px)' : 'translateY(0)';
-  lastY = y;
-});
+const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
+const menu=document.getElementById('menu'), nav=document.getElementById('nav'); if(menu) menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const canvas=document.getElementById('neural-canvas');const ctx=canvas.getContext('2d');let w,h,points=[];function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight;points=Array.from({length:Math.min(95,Math.floor(w*h/16000))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}function draw(){ctx.clearRect(0,0,w,h);for(const p of points){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,1.4,0,Math.PI*2);ctx.fillStyle='rgba(125,211,252,.65)';ctx.fill()}for(let i=0;i<points.length;i++){for(let j=i+1;j<points.length;j++){const a=points[i],b=points[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<140){ctx.strokeStyle=`rgba(167,139,250,${(1-d/140)*.18})`;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}}requestAnimationFrame(draw)}addEventListener('resize',resize);resize();draw();

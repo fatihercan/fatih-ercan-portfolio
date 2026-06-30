@@ -3,228 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Fatih Ercan — AI Language Specialist, LLM Evaluator, Red Teaming, Translation, Localization and Linguistic Quality Assurance." />
-  <meta name="keywords" content="Fatih Ercan, AI Language Specialist, LLM Evaluator, AI Trainer, Red Teaming, RLHF, Prompt Evaluation, Translation, Localization, English Turkish" />
-  <meta name="author" content="Fatih Ercan" />
-  <meta property="og:title" content="Fatih Ercan | AI Language Specialist" />
-  <meta property="og:description" content="Building safer, clearer and more reliable AI through language expertise, evaluation and human feedback." />
-  <meta property="og:type" content="website" />
   <title>Fatih Ercan | AI Language Specialist</title>
+  <meta name="description" content="Fatih Ercan is an AI Language Specialist, AI Trainer, Red Teaming practitioner, translator and university instructor specializing in LLM evaluation, quality assurance, localization and human feedback." />
+  <meta name="keywords" content="Fatih Ercan, AI Language Specialist, AI Trainer, LLM Evaluator, Red Teaming, Translation, Localization, QA, English Turkish" />
+  <meta property="og:title" content="Fatih Ercan | AI Language Specialist" />
+  <meta property="og:description" content="Building safer, smarter and more reliable AI systems through language expertise, evaluation and human feedback." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="orb orb-one"></div>
-  <div class="orb orb-two"></div>
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Fatih Ercan home">
-      <span>FE</span>
-    </a>
-    <nav class="nav" aria-label="Main navigation">
+  <header class="site-header">
+    <a href="#home" class="brand"><span class="brand-mark">FE</span><span>Fatih Ercan</span></a>
+    <nav class="nav" id="nav">
       <a href="#expertise">Expertise</a>
       <a href="#experience">Experience</a>
-      <a href="#cases">Case Studies</a>
+      <a href="#cases">AI Cases</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="assets/Fatih_Ercan_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
   </header>
 
-  <main>
+  <main id="home">
     <section class="hero section">
       <div class="hero-copy reveal">
-        <div class="status-pill"><span class="pulse"></span> Available for AI evaluation, QA & language projects</div>
-        <p class="eyebrow">Linguist • LLM Evaluator • Red Teaming • Translation • QA</p>
-        <h1>Fatih Ercan</h1>
-        <h2>Building safer, clearer and more reliable AI through language expertise.</h2>
-        <p class="lead">I help teams evaluate, stress-test and improve AI systems through structured human feedback, multilingual linguistic analysis, prompt evaluation, red teaming and quality assurance.</p>
-        <div class="button-row">
-          <a class="button primary" href="assets/Fatih_Ercan_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-          <a class="button" href="https://www.linkedin.com/in/fatih-ercan-4307962a" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="button" href="https://www.upwork.com/freelancers/~016127d26adf601c18" target="_blank" rel="noopener">Upwork</a>
+        <p class="eyebrow">AI Language Specialist • LLM Evaluation • Red Teaming</p>
+        <h1>Building trustworthy AI through language, evaluation and human expertise.</h1>
+        <p class="lead">I combine 15+ years of experience in higher education, translation, localization and language technologies with hands-on AI training, quality assurance and red teaming practice.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="assets/Fatih-Ercan-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/fatih-ercan-4307962a" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="https://www.upwork.com/freelancers/~016127d26adf601c18" target="_blank" rel="noopener">Upwork</a>
+        </div>
+        <div class="metric-row" aria-label="Professional highlights">
+          <div><strong>15+</strong><span>Years experience</span></div>
+          <div><strong>2022–Mar 2026</strong><span>AI Trainer & QA</span></div>
+          <div><strong>EN ↔ TR</strong><span>Language specialist</span></div>
         </div>
       </div>
-
-      <div class="hero-visual reveal">
+      <div class="hero-visual reveal delay-1">
         <div class="portrait-card">
-          <div class="portrait-glow"></div>
           <img src="assets/fatih-ercan.png" alt="Portrait of Fatih Ercan" />
-          <div class="floating-card card-a">
-            <strong>15+ yrs</strong>
-            <span>Language & education</span>
-          </div>
-          <div class="floating-card card-b">
-            <strong>EN ↔ TR</strong>
-            <span>Multilingual specialist</span>
+          <div class="status-card glass">
+            <span class="pulse"></span>
+            Available for AI evaluation, localization & QA projects
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section metric-strip reveal" aria-label="Professional highlights">
-      <div><strong>15+</strong><span>Years of professional experience</span></div>
-      <div><strong>2022–Mar 2026</strong><span>AI Trainer & QA, Invisible Technologies</span></div>
-      <div><strong>10+</strong><span>Years in translation, localization & language tech</span></div>
-      <div><strong>3</strong><span>Degrees / teaching qualification</span></div>
-    </section>
-
-    <section id="about" class="section split">
-      <div class="section-kicker reveal">
-        <p class="eyebrow">About</p>
-        <h2>Where academic rigor meets real-world AI evaluation.</h2>
-      </div>
-      <div class="text-block reveal">
-        <p>I am an AI Language Specialist with a background in English language teaching, translation, localization and language technology. My work combines the discipline of higher education with hands-on experience in evaluating and improving AI-generated language.</p>
-        <p>From 2022 to March 2026, I worked as an AI Trainer and Quality Assurance specialist at Invisible Technologies, contributing to AI evaluation workflows including prompt assessment, response review, red teaming, guideline compliance and model-quality analysis.</p>
-        <p>Alongside my AI work, I have long-standing experience as a university instructor, academic administrator, translator, interpreter and freelance language specialist.</p>
-      </div>
+    <section class="section intro reveal">
+      <div class="section-kicker">Positioning</div>
+      <h2>Not just an English instructor. A language expert for AI systems.</h2>
+      <p>I help teams evaluate, improve and localize AI-generated language. My background allows me to diagnose not only whether an output is wrong, but why it fails: instruction following, factuality, tone, ambiguity, safety, fluency, cultural fit or guideline alignment.</p>
     </section>
 
     <section id="expertise" class="section">
-      <div class="section-title center reveal">
-        <p class="eyebrow">Core Expertise</p>
-        <h2>Designed for AI, language quality and multilingual evaluation work.</h2>
+      <div class="section-head reveal">
+        <div class="section-kicker">Core Expertise</div>
+        <h2>Where language expertise meets artificial intelligence.</h2>
       </div>
-      <div class="cards four">
-        <article class="glass-card reveal">
-          <span class="card-icon">🧠</span>
-          <h3>AI Evaluation</h3>
-          <p>LLM response evaluation, prompt assessment, response ranking, RLHF-style workflows, instruction-following checks and quality scoring.</p>
-        </article>
-        <article class="glass-card reveal">
-          <span class="card-icon">🛡️</span>
-          <h3>Red Teaming</h3>
-          <p>Adversarial prompting, safety testing, policy-sensitive evaluation, hallucination detection, bias awareness and risk-focused review.</p>
-        </article>
-        <article class="glass-card reveal">
-          <span class="card-icon">🌍</span>
-          <h3>Translation & Localization</h3>
-          <p>English–Turkish translation, technical and academic localization, terminology consistency, proofreading, transcription and subtitling.</p>
-        </article>
-        <article class="glass-card reveal">
-          <span class="card-icon">🎓</span>
-          <h3>Higher Education</h3>
-          <p>University teaching, curriculum design, assessment, academic coordination, learner feedback and quality assurance in education.</p>
-        </article>
+      <div class="cards grid-4">
+        <article class="card reveal"><span class="icon">🧠</span><h3>AI Evaluation</h3><p>LLM response assessment, RLHF workflows, human preference ranking, instruction-following evaluation and annotation quality.</p><ul><li>Prompt evaluation</li><li>Response rating</li><li>Hallucination detection</li></ul></article>
+        <article class="card reveal delay-1"><span class="icon">🛡️</span><h3>Red Teaming</h3><p>Adversarial testing of model behavior with attention to safety, policy compliance, edge cases and risk-sensitive outputs.</p><ul><li>Jailbreak testing</li><li>Bias detection</li><li>Safety review</li></ul></article>
+        <article class="card reveal delay-2"><span class="icon">🌍</span><h3>Language Services</h3><p>English–Turkish translation, localization, proofreading, transcription, subtitling, terminology and linguistic QA.</p><ul><li>Localization</li><li>Editing</li><li>CAT tools</li></ul></article>
+        <article class="card reveal delay-3"><span class="icon">🎓</span><h3>Academic Expertise</h3><p>University-level teaching, curriculum design, assessment systems, educational leadership and research-informed evaluation.</p><ul><li>Assessment</li><li>Curriculum</li><li>QA systems</li></ul></article>
       </div>
     </section>
 
-    <section id="experience" class="section split timeline-section">
-      <div class="section-kicker reveal">
-        <p class="eyebrow">Experience</p>
-        <h2>A profile built across AI, language technology and academia.</h2>
+    <section id="experience" class="section split">
+      <div class="section-head sticky-head reveal">
+        <div class="section-kicker">Experience</div>
+        <h2>A career built around language, judgment and quality.</h2>
+        <p>From translation and academic leadership to AI training and linguistic quality assurance.</p>
       </div>
       <div class="timeline reveal">
-        <div class="timeline-item">
-          <span class="date">2022 — Mar 2026</span>
-          <h3>AI Trainer & Quality Assurance Specialist</h3>
-          <p class="org">Invisible Technologies</p>
-          <p>Evaluated AI-generated outputs, applied project guidelines, reviewed quality, supported model improvement and contributed to red teaming, prompt evaluation and response assessment workflows.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="date">2016 — Present</span>
-          <h3>Deputy Director</h3>
-          <p class="org">School of Foreign Languages, Osmaniye Korkut Ata University</p>
-          <p>Academic administration, curriculum planning, assessment coordination, quality assurance, institutional reporting and educational leadership.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="date">2015 — Present</span>
-          <h3>Instructor</h3>
-          <p class="org">Osmaniye Korkut Ata University</p>
-          <p>Teaching, assessment, curriculum development and language education in higher education contexts.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="date">2013 — 2016</span>
-          <h3>Language & Data Specialist</h3>
-          <p class="org">Upwork Global Inc.</p>
-          <p>Full-time freelance language work including translation, localization, transcription, proofreading, subtitling and data-focused linguistic projects.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="date">2007 — 2015</span>
-          <h3>Lecturer, Coordinator & Interpreter</h3>
-          <p class="org">European University of Lefke / General Directorate of Security / SNC-Lavalin</p>
-          <p>University teaching, academic coordination, translation, interpreting and multilingual communication across institutional and technical contexts.</p>
-        </div>
+        <div class="timeline-item"><span class="date">2022–Mar 2026</span><h3>AI Trainer & Quality Assurance — Invisible Technologies</h3><p>Worked on AI training and evaluation tasks including response assessment, red teaming, guideline compliance, quality review and human feedback workflows.</p></div>
+        <div class="timeline-item"><span class="date">2016–Present</span><h3>Deputy Director — School of Foreign Languages</h3><p>Academic administration, curriculum planning, assessment coordination, institutional quality assurance and program development.</p></div>
+        <div class="timeline-item"><span class="date">2015–Present</span><h3>Instructor — Osmaniye Korkut Ata University</h3><p>University-level language instruction, assessment, curriculum implementation and student learning support.</p></div>
+        <div class="timeline-item"><span class="date">2013–2016</span><h3>Language & Data Specialist — Upwork</h3><p>Freelance language projects involving translation, localization, transcription, proofreading, subtitling and data-related linguistic work.</p></div>
+        <div class="timeline-item"><span class="date">2008–2015</span><h3>Lecturer & Deputy Director — European University of Lefke</h3><p>Taught translation, grammar, lexical competence and ELT-related courses while contributing to academic coordination and administration.</p></div>
       </div>
     </section>
 
     <section id="cases" class="section">
-      <div class="section-title center reveal">
-        <p class="eyebrow">AI Case Studies</p>
-        <h2>NDA-safe examples of the problems I help solve.</h2>
+      <div class="section-head reveal">
+        <div class="section-kicker">AI Case Studies</div>
+        <h2>NDA-safe examples of the problems I work on.</h2>
       </div>
-      <div class="cards three">
-        <article class="case-card reveal">
-          <span>01</span>
-          <h3>Hallucination Detection</h3>
-          <p>Identifying fluent but misleading or unsupported AI outputs through factuality checks, context analysis and guideline-based evaluation.</p>
-        </article>
-        <article class="case-card reveal">
-          <span>02</span>
-          <h3>Prompt Robustness</h3>
-          <p>Testing whether model responses follow complex instructions, respect constraints and maintain quality across edge cases.</p>
-        </article>
-        <article class="case-card reveal">
-          <span>03</span>
-          <h3>AI Safety & Red Teaming</h3>
-          <p>Exploring failure modes, unsafe completions, ambiguous user intent and policy-sensitive outputs with careful documentation.</p>
-        </article>
-        <article class="case-card reveal">
-          <span>04</span>
-          <h3>Multilingual Evaluation</h3>
-          <p>Reviewing English–Turkish content for naturalness, cultural fit, terminology, meaning transfer and instruction alignment.</p>
-        </article>
-        <article class="case-card reveal">
-          <span>05</span>
-          <h3>Quality Assurance</h3>
-          <p>Maintaining consistency across large volumes of evaluation work by applying stable criteria and identifying recurring error patterns.</p>
-        </article>
-        <article class="case-card reveal">
-          <span>06</span>
-          <h3>Language Technology</h3>
-          <p>Supporting speech-recognition and transcription projects through phonetic transcription, localization and linguistic data review.</p>
-        </article>
+      <div class="case-grid">
+        <article class="case reveal"><span>01</span><h3>Hallucination Detection</h3><p>Identifying fluent but factually unreliable outputs and tracing the source of the error through prompt interpretation and response structure.</p></article>
+        <article class="case reveal delay-1"><span>02</span><h3>Prompt Robustness</h3><p>Testing whether a model follows complex, layered and constraint-heavy instructions across realistic user scenarios.</p></article>
+        <article class="case reveal delay-2"><span>03</span><h3>Safety & Red Teaming</h3><p>Exploring edge cases, policy-sensitive prompts and adversarial inputs to help models behave more safely and consistently.</p></article>
+        <article class="case reveal delay-3"><span>04</span><h3>Multilingual Evaluation</h3><p>Assessing English–Turkish outputs for meaning, tone, fluency, cultural fit, terminology and task alignment.</p></article>
       </div>
     </section>
 
-    <section class="section trusted reveal">
-      <p class="eyebrow">Selected Organizations & Projects</p>
-      <div class="logo-cloud">
-        <span>Invisible Technologies</span>
-        <span>Upwork</span>
-        <span>Nuance</span>
-        <span>Yandex</span>
-        <span>OKÜ</span>
-        <span>European University of Lefke</span>
+    <section id="projects" class="section projects">
+      <div class="section-head reveal">
+        <div class="section-kicker">Selected Work</div>
+        <h2>Language technology, translation and academic publishing.</h2>
+      </div>
+      <div class="project-list reveal">
+        <a href="https://www.upwork.com/freelancers/~016127d26adf601c18" target="_blank" rel="noopener" class="project"><div><h3>AI & Language Data Projects</h3><p>Freelance and project-based work in annotation, translation, transcription, proofreading and linguistic QA.</p></div><span>View profile →</span></a>
+        <div class="project"><div><h3>Speech Recognition Datasets</h3><p>Phonetic transcription projects for speech recognition and navigation technologies, including Nuance and Yandex-related projects.</p></div><span>2013–2014</span></div>
+        <div class="project"><div><h3>Academic Journals</h3><p>Technical officer and managing editor experience for international academic journals and digital publishing workflows.</p></div><span>Editorial</span></div>
       </div>
     </section>
 
-    <section class="section skills-section">
-      <div class="section-title center reveal">
-        <p class="eyebrow">Skills</p>
-        <h2>Tools, workflows and strengths.</h2>
-      </div>
-      <div class="skill-cloud reveal">
-        <span>LLM Evaluation</span><span>RLHF</span><span>Prompt Evaluation</span><span>Red Teaming</span><span>AI Quality Assurance</span><span>Data Annotation</span><span>Translation</span><span>Localization</span><span>Editing</span><span>Proofreading</span><span>Transcription</span><span>Subtitling</span><span>Trados</span><span>MemoQ</span><span>SPSS</span><span>Aegisub</span><span>Microsoft Office</span>
+    <section class="section skills reveal">
+      <div class="section-kicker">Toolkit</div>
+      <h2>Skills & tools</h2>
+      <div class="skill-cloud">
+        <span>LLM Evaluation</span><span>RLHF</span><span>Red Teaming</span><span>Prompt Engineering</span><span>Quality Assurance</span><span>Annotation</span><span>Translation</span><span>Localization</span><span>Proofreading</span><span>Trados</span><span>MemoQ</span><span>SPSS</span><span>Aegisub</span><span>Microsoft Office</span>
       </div>
     </section>
 
-    <section id="contact" class="section contact-card reveal">
-      <p class="eyebrow">Contact</p>
-      <h2>Let’s work on language, AI quality or multilingual evaluation.</h2>
-      <p>Available for AI evaluation, red teaming, translation, localization, linguistic QA and language-technology projects.</p>
-      <div class="button-row center-buttons">
-        <a class="button primary" href="mailto:janwaljan@gmail.com">Email Me</a>
-        <a class="button" href="https://www.linkedin.com/in/fatih-ercan-4307962a" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="button" href="https://www.upwork.com/freelancers/~016127d26adf601c18" target="_blank" rel="noopener">Upwork</a>
+    <section class="section education reveal">
+      <div class="section-head">
+        <div class="section-kicker">Education</div>
+        <h2>Academic foundation</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu"><strong>MA</strong><span>English Language Teaching</span><small>European University of Lefke, 2009</small></div>
+        <div class="edu"><strong>BA</strong><span>Translation & Interpretation</span><small>Hacettepe University, 2006</small></div>
+        <div class="edu"><strong>BA</strong><span>American Culture & Literature</span><small>Hacettepe University</small></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <div>
+        <div class="section-kicker">Contact</div>
+        <h2>Let’s build better AI through better language evaluation.</h2>
+        <p>Available for AI evaluation, red teaming, localization, English–Turkish language QA, translation and academic language projects.</p>
+      </div>
+      <div class="contact-card glass">
+        <a href="mailto:janwaljan@gmail.com">janwaljan@gmail.com</a>
+        <a href="https://www.linkedin.com/in/fatih-ercan-4307962a" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~016127d26adf601c18" target="_blank" rel="noopener">Upwork</a>
+        <a href="assets/Fatih-Ercan-CV.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a href="#top" class="brand small"><span>FE</span></a>
-    <p>Helping AI understand human language better.</p>
+  <footer class="footer">
+    <p>© <span id="year"></span> Fatih Ercan. Helping AI understand human language better.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
